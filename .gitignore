@@ -122,6 +122,7 @@ tags
 .clang_complete
 .gcc-flags.json
 /lib/
+.ccls-cache/*
 
 # Workaround for Deviot+platformio quirks
 Marlin/lib
