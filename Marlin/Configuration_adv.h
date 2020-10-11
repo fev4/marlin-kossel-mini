@@ -812,19 +812,10 @@
 #define INVERT_Z_STEP_PIN false
 #define INVERT_E_STEP_PIN false
 
-<<<<<<< HEAD
 // Default stepper release if idle. Set to 0 to deactivate.
 // Steppers will shut down DEFAULT_STEPPER_DEACTIVE_TIME seconds after the last move when DISABLE_INACTIVE_? is true.
 // Time can be set by M18 and M84.
 #define DEFAULT_STEPPER_DEACTIVE_TIME 60
-=======
-/**
- * Idle Stepper Shutdown
- * Set DISABLE_INACTIVE_? 'true' to shut down axis steppers after an idle period.
- * The Deactive Time can be overridden with M18 and M84. Set to 0 for No Timeout.
- */
-#define DEFAULT_STEPPER_DEACTIVE_TIME 120
->>>>>>> a52afd2aebeb1029f80f175489e66a310de4197d
 #define DISABLE_INACTIVE_X true
 #define DISABLE_INACTIVE_Y true
 #define DISABLE_INACTIVE_Z true  // Set 'false' if the nozzle could fall onto your printed part!
@@ -1035,12 +1026,9 @@
 // @section lcd
 
 #if EITHER(ULTIPANEL, EXTENSIBLE_UI)
-<<<<<<< HEAD
   #define MANUAL_FEEDRATE_XYZ 50*60
   #define MANUAL_FEEDRATE { MANUAL_FEEDRATE_XYZ, MANUAL_FEEDRATE_XYZ, MANUAL_FEEDRATE_XYZ, 60 } // Feedrates for manual moves along X, Y, Z, E from panel
-=======
-  #define MANUAL_FEEDRATE { 50*60, 50*60, 4*60, 2*60 } // (mm/min) Feedrates for manual moves along X, Y, Z, E from panel
->>>>>>> a52afd2aebeb1029f80f175489e66a310de4197d
+  //#define MANUAL_FEEDRATE { 50*60, 50*60, 4*60, 2*60 } // (mm/min) Feedrates for manual moves along X, Y, Z, E from panel
   #define SHORT_MANUAL_Z_MOVE 0.025 // (mm) Smallest manual Z move (< 0.1mm)
   #if ENABLED(ULTIPANEL)
     #define MANUAL_E_MOVES_RELATIVE // Display extruder move distance rather than "position"
@@ -1161,11 +1149,8 @@
 
   //#define MENU_ADDAUTOSTART               // Add a menu option to run auto#.g files
 
-<<<<<<< HEAD
-  #define EVENT_GCODE_SD_STOP "G28"         // G-code to run on Stop Print (e.g., "G28XY" or "G27")
-=======
-  #define EVENT_GCODE_SD_ABORT "G28XY"      // G-code to run on SD Abort Print (e.g., "G28XY" or "G27")
->>>>>>> a52afd2aebeb1029f80f175489e66a310de4197d
+  #define EVENT_GCODE_SD_ABORT "G28"         // G-code to run on Stop Print (e.g., "G28XY" or "G27")
+  //#define EVENT_GCODE_SD_ABORT "G28XY"      // G-code to run on SD Abort Print (e.g., "G28XY" or "G27")
 
   #if ENABLED(PRINTER_EVENT_LEDS)
     #define PE_LEDS_COMPLETED_TIME  (30*60) // (seconds) Time to keep the LED "done" color before restoring normal illumination

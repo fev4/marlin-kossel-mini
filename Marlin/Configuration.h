@@ -246,14 +246,9 @@
 
 #elif ENABLED(MAGNETIC_PARKING_EXTRUDER)
 
-<<<<<<< HEAD
-#define MPE_FAST_SPEED 9000        // (mm/m) Speed for travel before last distance point (9000)
+#define MPE_FAST_SPEED 9000 // (mm/m) Speed for travel before last distance point (9000)
 #define MPE_SLOW_SPEED 4500 // (mm/m) Speed for last distance travel to park and couple (4500)
-=======
-#define MPE_FAST_SPEED 9000 // (mm/min) Speed for travel before last distance point
-#define MPE_SLOW_SPEED 4500 // (mm/min) Speed for last distance travel to park and couple
->>>>>>> a52afd2aebeb1029f80f175489e66a310de4197d
-    #define MPE_TRAVEL_DISTANCE 10 // (mm) Last distance point
+#define MPE_TRAVEL_DISTANCE 10 // (mm) Last distance point
 #define MPE_COMPENSATION 0  // Offset Compensation -1 , 0 , 1 (multiplier) only for coupling
 
 #endif
@@ -1173,13 +1168,8 @@
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
 #define PROBING_MARGIN 10
 
-<<<<<<< HEAD
-// X and Y axis travel speed (mm/m) between probes
-#define XY_PROBE_SPEED 4000
-=======
 // X and Y axis travel speed (mm/min) between probes
-#define XY_PROBE_SPEED (133 * 60)
->>>>>>> a52afd2aebeb1029f80f175489e66a310de4197d
+#define XY_PROBE_SPEED 4000
 
 // Feedrate (mm/min) for the first approach when double-probing (MULTIPLE_PROBING == 2)
 #define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z
@@ -1582,14 +1572,11 @@
 #define Z_SAFE_HOMING_Y_POINT Y_CENTER // Y point for Z homing
 #endif
 
-<<<<<<< HEAD
 // Delta only homes to Z
 #define HOMING_FEEDRATE_Z (4000)
-=======
 // Homing speeds (mm/min)
-#define HOMING_FEEDRATE_XY (50 * 60)
-#define HOMING_FEEDRATE_Z (4 * 60)
->>>>>>> a52afd2aebeb1029f80f175489e66a310de4197d
+//#define HOMING_FEEDRATE_XY (50 * 60)
+//#define HOMING_FEEDRATE_Z (4 * 60)
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
@@ -1894,7 +1881,7 @@
  *
  * :{ 'en':'English', 'an':'Aragonese', 'bg':'Bulgarian', 'ca':'Catalan', 'cz':'Czech', 'da':'Danish', 'de':'German', 'el':'Greek', 'el_gr':'Greek (Greece)', 'es':'Spanish', 'eu':'Basque-Euskera', 'fi':'Finnish', 'fr':'French', 'gl':'Galician', 'hr':'Croatian', 'hu':'Hungarian', 'it':'Italian', 'jp_kana':'Japanese', 'ko_KR':'Korean (South Korea)', 'nl':'Dutch', 'pl':'Polish', 'pt':'Portuguese', 'pt_br':'Portuguese (Brazilian)', 'ro':'Romanian', 'ru':'Russian', 'sk':'Slovak', 'tr':'Turkish', 'uk':'Ukrainian', 'vi':'Vietnamese', 'zh_CN':'Chinese (Simplified)', 'zh_TW':'Chinese (Traditional)', 'test':'TEST' }
  */
-#define LCD_LANGUAGE es
+#define LCD_LANGUAGE en
 
 /**
  * LCD Character Set
@@ -1934,7 +1921,7 @@
  * you must uncomment the following option or it won't work.
  *
  */
-//#define SDSUPPORT
+#define SDSUPPORT
 
 /**
  * SD CARD: SPI SPEED
@@ -2022,7 +2009,7 @@
 // If you have a speaker that can produce tones, enable it here.
 // By default Marlin assumes you have a buzzer with a fixed frequency.
 //
-//#define SPEAKER
+#define SPEAKER
 
 //
 // The duration and frequency for the UI feedback sound.
